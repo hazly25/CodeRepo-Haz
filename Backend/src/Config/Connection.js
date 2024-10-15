@@ -20,8 +20,7 @@ const getConnection = async ()=> {
         console.log('Conectados a la base de datos SQL Server')
 
     } catch (error) {
-        console.log('Error: ', error);
-        process.exit(1);
+        console.log('Error de conexion: ', error);
     }
 }
 
