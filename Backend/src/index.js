@@ -7,6 +7,8 @@ import gruporouter from './Routes/GrupoRoute.js';
 import trabajosrouter from './Routes/TrabajosRoute.js';
 import eviorouter from './Routes/EnvioRoute.js';
 import calificacionrouter from './Routes/CalificacionRoute.js';
+import crear_usuario from './Routes/RegistrarRoute.js'
+import iniciar_sesion from './Routes/Iniciar_sesionRoute.js';
 import { getConnection } from './Config/Connection.js';
 
 dotenv.config();
@@ -21,6 +23,8 @@ app.use('/listarg', gruporouter);
 app.use('/listart', trabajosrouter);
 app.use('/listare', eviorouter);
 app.use('/listarc', calificacionrouter);
+app.use('/api', iniciar_sesion);
+app.use('/crear_usuario', crear_usuario);
 
 app.listen(process.env.PORT, () => {
     getConnection(); 
